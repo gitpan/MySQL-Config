@@ -1,5 +1,14 @@
-Config.pm
-Makefile.PL
+Changes
 MANIFEST
-test.pl
+META.yml                                Module meta-data (added by MakeMaker)
+Makefile.PL
 README
+lib/MySQL/Config.pm
+t/00load.t
+t/01pod.t
+t/02config.t
+t/03argv.t
+t/04undef.t
+t/my.cnf
+t/testing.cnf
+t/05nested.t t/config.t
