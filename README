@@ -41,7 +41,6 @@ THE my.cnf FILE
 
 USING MySQL::Config
   load_defaults("name", \@groups, \$count, \@ary)
-
     "load_defaults" takes 4 arguments: a string denoting the name of the
     config file (which should generally be *my*); a reference to an array of
     groups from which options should be returned; a reference to a scalar
@@ -55,7 +54,7 @@ USING MySQL::Config
 
     and so on.
 
-    If the final array reference is missing, "@ARGV" will be used. Options
+    If the final array reference is missing, @ARGV will be used. Options
     will be pushed onto the end of the array, leaving what is already in
     place undisturbed.
 
@@ -63,7 +62,6 @@ USING MySQL::Config
     number of elements parsed from the config files.
 
   parse_defaults("name", \@groups)
-
     "load_defaults" has an un-Perlish interface, mostly because it is
     exactly the same signature as the version from the C API. There is also
     a function, not exported by default, called "parse_defaults", which
@@ -74,7 +72,7 @@ USING MySQL::Config
 
         my %cfg = parse_defaults "my", \@groups;
 
-    "%cfg" looks like:
+    %cfg looks like:
 
         %cfg = (
             "user" => "username",
@@ -125,7 +123,7 @@ SUPPORT
     "MySQL::Config" is supported by the author.
 
 VERSION
-    This is "MySQL::Config", revision $Revision: 1.2 $.
+    This is "MySQL::Config", version 1.04.
 
 AUTHOR
     darren chamberlain <darren@cpan.org>
@@ -137,5 +135,5 @@ COPYRIGHT
     under the same terms as Perl itself.
 
 SEE ALSO
-    the Perl manpage
+    Perl
 

@@ -1,8 +1,6 @@
 #!/usr/bin/perl
 
 # ----------------------------------------------------------------------
-# $Id: Makefile.PL,v 1.2 2003/09/24 12:25:34 dlc Exp $
-# ----------------------------------------------------------------------
 # Makefile.PL for MySQL::Config.
 # Originally created on Tuesday, September 23, 2003.
 # ----------------------------------------------------------------------
@@ -29,7 +27,7 @@ my (%PREREQ_PM, @EXE_FILES, %clean, %macro, %dist, @AUTHOR, @ABSTRACT);
 );
 
 %dist = (
-    PREOP => 'perldoc -t lib/MySQL/Config.pm > README; cpansign -s',
+    PREOP => 'perldoc -t lib/MySQL/Config.pm > README',
 );
 
 if ($] >= 5.00503) {
@@ -43,7 +41,7 @@ else {
 
 WriteMakefile(
     NAME        => "MySQL::Config",
-    VERSION     => "1.03",
+    VERSION     => "1.04",
     PREREQ_PM   => \%PREREQ_PM,
     EXE_FILES   => \@EXE_FILES,
     clean       => \%clean,
